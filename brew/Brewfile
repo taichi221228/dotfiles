@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "oven-sh/bun"
 brew "duti"
 brew "gh"
 brew "go-task"
