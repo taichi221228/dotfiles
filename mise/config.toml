@@ -1,0 +1,4 @@
+[tools]
+bun = "latest"
+go = "1.21"
+node = "latest"
