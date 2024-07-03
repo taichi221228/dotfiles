@@ -6,6 +6,9 @@ set -o ignoreeof
 
 zsh ./zsh/init.zsh
 zsh ./brew/init.zsh
+
+source "$HOME/.zshrc"
+
 zsh ./duti/init.zsh
 zsh ./dict/init.zsh
 zsh ./mise/init.zsh
