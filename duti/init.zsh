@@ -15,3 +15,5 @@ duti -s com.jetbrains.WebStorm 'dyn.ah62d4rv4ge80y65tr3vu' all
 
 duti -s com.jetbrains.WebStorm 'public.yaml' all
 duti -s com.jetbrains.WebStorm 'dyn.ah62d4rv4ge81k55rru' all
+
+duti -s com.jetbrains.WebStorm 'dyn.ah62d4rv4ge8003dq' all
