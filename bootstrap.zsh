@@ -9,8 +9,8 @@ zsh ./brew/init.zsh
 
 source "$HOME/.zshrc"
 
-zsh ./duti/init.zsh
 zsh ./dict/init.zsh
+zsh ./duti/init.zsh
 zsh ./mise/init.zsh
 zsh ./onyx/init.zsh
 zsh ./ssh/init.zsh
