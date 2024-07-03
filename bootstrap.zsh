@@ -8,6 +8,7 @@ zsh ./zsh/init.zsh
 zsh ./brew/init.zsh
 zsh ./duti/init.zsh
 zsh ./dict/init.zsh
+zsh ./mise/init.zsh
 zsh ./onyx/init.zsh
 zsh ./ssh/init.zsh
 
