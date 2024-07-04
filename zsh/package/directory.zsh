@@ -13,6 +13,8 @@ export O="$HOME/Documents"
 export P="$HOME/Projects"
 export W="$HOME/Works"
 
+alias ~='cd ~'
+alias H='cd $HOME'
 alias A='cd /Applications'
 alias C='cd $HOME/Contributions'
 alias F='cd $REMOTE_HOME/Configs'
