@@ -1,7 +1,7 @@
 # SSH
 
 known_hosts*
-ssh/.ssh/vault
+ssh/.ssh/vault/
 
 # ZSH
 
