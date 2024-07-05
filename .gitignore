@@ -1,8 +1,6 @@
 # SSH
-
 known_hosts*
 ssh/.ssh/vault/
 
 # ZSH
-
 package/work.zsh
