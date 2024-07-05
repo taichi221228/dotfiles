@@ -4,3 +4,6 @@ ssh/.ssh/vault/
 
 # ZSH
 package/work.zsh
+
+# Dependencies
+node_modules/
