@@ -4,6 +4,7 @@ cd "$(dirname "$0")" || exit
 
 set -o ignoreeof
 
+zsh ./prezto/init.zsh
 zsh ./zsh/init.zsh
 zsh ./brew/init.zsh
 
