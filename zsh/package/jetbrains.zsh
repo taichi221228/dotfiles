@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export PATH=$PATH:$HOME/Library/Application\ Support/JetBrains/Toolbox/scripts/
+
 alias ac_='appcode'
 alias cl_='clion'
 alias dg_='datagrip'
