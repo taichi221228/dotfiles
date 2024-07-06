@@ -4,6 +4,7 @@ PACKAGE="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Configs/general/zsh/
 
 source "$PACKAGE/general.zsh"
 source "$PACKAGE/directory.zsh"
+source "$PACKAGE/prezto.zsh"
 source "$PACKAGE/brew.zsh"
 
 source "$PACKAGE/gcloud.zsh"
