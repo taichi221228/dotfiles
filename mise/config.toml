@@ -1,5 +1,8 @@
-[ tools ]
+[tools]
   bun = "latest"
   deno = "latest"
   go = "1.21"
   node = "latest"
+
+[settings]
+  experimental = true
