@@ -25,4 +25,6 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 chmod +x "$installer"
 "$installer" install
 
-home-manager switch --flake ~/dotfiles
+mkdir -p ~/.config/home-manager
+ln -sfn ~/dotfiles/flake.* ~/.config/home-manager
+home-manager switch
