@@ -6,5 +6,6 @@
     ../languages/sh.nix
     ../languages/javascript/bun.nix
     ../shell/alacritty.nix
+    ../shell/nushell.nix
   ];
 }
