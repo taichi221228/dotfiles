@@ -1,3 +1,6 @@
 {
-  imports = [ ../app/home.nix ];
+  imports = [ 
+    ../app/home.nix
+    ../app/jujutsu.nix
+  ];
 }
