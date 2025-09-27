@@ -1,12 +1,16 @@
 {
   config,
   pkgs,
+  vars,
   ...
 }:
+let
+  inherit (vars) username;
+in
 {
   home = {
-    username = "taichi221228";
-    homeDirectory = /Users/taichi221228;
+    inherit username;
+    homeDirectory = /Users/${username};
     stateVersion = "25.05";
   };
 
