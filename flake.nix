@@ -18,7 +18,7 @@
     {
       homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        modules = [ ./profiles/common.nix ];
+        modules = [ ./home.nix ];
         extraSpecialArgs = { inherit vars; };
       };
     };
