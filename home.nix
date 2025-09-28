@@ -15,4 +15,13 @@ in
   };
 
   programs.home-manager.enable = true;
+
+  imports = [
+    ./app/jujutsu.nix
+    ./app/raycast.nix
+    ./languages/nix.nix
+    ./languages/sh.nix
+    ./languages/javascript/bun.nix
+    ./shell/alacritty.nix
+  ];
 }
