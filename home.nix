@@ -17,7 +17,7 @@
     ./app/jujutsu.nix
     ./app/raycast.nix
     ./languages/nix.nix
-    ./languages/sh.nix
+    ./languages/shell.nix
     ./languages/javascript.nix
     ./shell/alacritty.nix
     ./shell/zsh.nix
