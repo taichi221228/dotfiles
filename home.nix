@@ -10,6 +10,7 @@
   };
   programs.home-manager.enable = true;
   imports = [
+    ./appearance/font.nix
     ./app/git.nix
     ./app/jujutsu.nix
     ./app/raycast.nix
@@ -17,5 +18,6 @@
     ./languages/sh.nix
     ./languages/javascript/bun.nix
     ./shell/alacritty.nix
+    ./shell/zsh.nix
   ];
 }
