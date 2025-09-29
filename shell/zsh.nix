@@ -7,6 +7,7 @@
       syntaxHighlighting.enable = true;
     };
     bat.enable = true;
+    fd.enable = true;
     fzf = {
       enable = true;
       enableZshIntegration = true;
