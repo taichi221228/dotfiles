@@ -5,6 +5,7 @@
 }:
 {
   home = {
+    username = "taichi221228";
     homeDirectory = /Users/taichi221228;
     stateVersion = "25.05";
   };
