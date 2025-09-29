@@ -12,6 +12,7 @@
       enable = true;
       enableZshIntegration = true;
     };
+    ripgrep.enable = true;
     starship = {
       enable = true;
       enableZshIntegration = true;
