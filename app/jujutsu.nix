@@ -1,8 +1,4 @@
 {
-  programs.git = {
-    enable = true;
-    ignores = [ ".jj" ];
-  };
   programs.jujutsu = {
     enable = true;
     settings = {

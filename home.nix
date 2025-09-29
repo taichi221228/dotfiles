@@ -12,6 +12,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./app/git.nix
     ./app/jujutsu.nix
     ./app/raycast.nix
     ./languages/nix.nix
