@@ -16,9 +16,9 @@
     ./app/git.nix
     ./app/jujutsu.nix
     ./app/raycast.nix
+    ./languages/javascript.nix
     ./languages/nix.nix
     ./languages/shell.nix
-    ./languages/javascript.nix
     ./shell/alacritty.nix
     ./shell/zsh.nix
   ];
