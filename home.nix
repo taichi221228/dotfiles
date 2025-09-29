@@ -11,6 +11,7 @@
   };
   programs.home-manager.enable = true;
   imports = [
+    ./core/utils.nix
     ./appearance/font.nix
     ./app/git.nix
     ./app/jujutsu.nix
