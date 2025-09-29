@@ -11,15 +11,10 @@
 
   outputs =
     { nixpkgs, home-manager, ... }:
-    let
-      vars = import ./core/vars.nix;
-      inherit (vars) username;
-    in
     {
-      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.taichi221228 = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
         modules = [ ./home.nix ];
-        extraSpecialArgs = { inherit vars; };
       };
     };
 }

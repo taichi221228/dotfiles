@@ -1,7 +1,3 @@
-{ vars, ... }:
-let
-  inherit (vars) username email;
-in
 {
   programs.git = {
     enable = true;
@@ -11,8 +7,8 @@ in
     enable = true;
     settings = {
       user = {
-        name = username;
-        inherit email;
+        name = "taichi221228";
+        email = "taichi221228@icloud.com";
       };
     };
   };
