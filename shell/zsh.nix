@@ -3,6 +3,7 @@
     zsh = {
       enable = true;
       enableCompletion = true;
+      autosuggestion.enable = true;
     };
     bat.enable = true;
     fzf = {
