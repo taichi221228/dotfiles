@@ -1,6 +1,9 @@
 {
   programs = {
-    zsh.enable = true;
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+    };
     bat.enable = true;
     fzf = {
       enable = true;
