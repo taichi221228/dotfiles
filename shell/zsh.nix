@@ -1,6 +1,7 @@
 {
   programs = {
     zsh.enable = true;
+    bat.enable = true;
     starship = {
       enable = true;
       enableZshIntegration = true;
