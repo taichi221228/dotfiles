@@ -12,6 +12,10 @@
         os.symbols.OpenCloudOS = "🌩️  ";
       };
     };
+    zellij = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     zoxide = {
       enable = true;
       enableZshIntegration = true;
