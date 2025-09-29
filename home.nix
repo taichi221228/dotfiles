@@ -18,7 +18,7 @@
     ./app/raycast.nix
     ./languages/nix.nix
     ./languages/sh.nix
-    ./languages/javascript/bun.nix
+    ./languages/javascript.nix
     ./shell/alacritty.nix
     ./shell/zsh.nix
   ];
