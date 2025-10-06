@@ -16,7 +16,7 @@
     ./languages/nix.nix
     ./languages/shell.nix
     ./languages/toml.nix
-    ./shell/alacritty.nix
-    ./shell/zsh.nix
+    ./terminal/alacritty.nix
+    ./terminal/zsh.nix
   ];
 }
