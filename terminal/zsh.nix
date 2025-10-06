@@ -13,10 +13,6 @@
       enableZshIntegration = true;
     };
     ripgrep.enable = true;
-    zellij = {
-      enable = true;
-      enableZshIntegration = true;
-    };
     zoxide = {
       enable = true;
       enableZshIntegration = true;
