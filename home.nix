@@ -8,6 +8,7 @@
   programs.home-manager.enable = true;
   imports = [
     ./core/utils.nix
+    ./app/emacs.nix
     ./app/git.nix
     ./app/jujutsu.nix
     ./app/raycast.nix
