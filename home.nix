@@ -18,6 +18,7 @@
     ./languages/toml.nix
     ./terminal/alacritty.nix
     ./terminal/starship.nix
+    ./terminal/zellij.nix
     ./terminal/zsh.nix
   ];
 }
