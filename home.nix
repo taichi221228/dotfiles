@@ -17,6 +17,7 @@
     ./languages/shell.nix
     ./languages/toml.nix
     ./terminal/alacritty.nix
+    ./terminal/starship.nix
     ./terminal/zsh.nix
   ];
 }
