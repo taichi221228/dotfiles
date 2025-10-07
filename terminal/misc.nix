@@ -6,6 +6,8 @@
     fzf = {
       enable = true;
       enableZshIntegration = true;
+      defaultCommand = "fd --type f --strip-cwd-prefix";
+      fileWidgetCommand = "$FZF_DEFAULT_COMMAND";
     };
     ripgrep.enable = true;
     zoxide = {
