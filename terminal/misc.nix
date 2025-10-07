@@ -6,7 +6,7 @@
     fzf = {
       enable = true;
       enableZshIntegration = true;
-      defaultCommand = "fd --type f --strip-cwd-prefix";
+      defaultCommand = "fd --type f --strip-cwd-prefix --exclude .jj";
       fileWidgetCommand = "$FZF_DEFAULT_COMMAND";
     };
     ripgrep.enable = true;
