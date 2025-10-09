@@ -1,0 +1,95 @@
+# HACK: Specifying the output destination for custom commands is dangerous.
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+${custom.jj}\
+${custom.jj_change_id}\
+${custom.jj_change_id_divergent}\
+${custom.jj_bookmarks}\
+${custom.jj_commit_hidden}\
+${custom.jj_commit_immutable}\
+${custom.jj_commit_conflict}\
+${custom.jj_commit_empty}\
+${custom.jj_description}\
+${custom.jj_description_empty}\
+$all
+"""
+
+# For Alacritty. Alacritty can't display `☁️`/`⛅` using Apple Color Emoji.
+[aws]
+symbol = "🌧️  "
+
+[gcloud]
+symbol = "🌧️  "
+
+[openstack]
+symbol = "🌧️  "
+
+[os.symbols]
+OpenCloudOS = "🌧️  "
+
+# Self implementation of Jujutsu integration.
+[custom.jj]
+when = "jj root --ignore-working-copy"
+symbol = " "
+style = "bright-purple"
+format = "on [$symbol]($style)"
+
+[custom.jj_change_id]
+command = "jj log -r @ -T 'if(!divergent, change_id.short(8))' --color=never --ignore-working-copy --no-graph"
+when = "jj root --ignore-working-copy"
+style = "bold bright-purple"
+
+[custom.jj_change_id_divergent]
+command = """jj log -r @ -T 'if(divergent, change_id.short(8) ++ "??")' --color=never --ignore-working-copy --no-graph"""
+when = "jj root --ignore-working-copy"
+style = "bold red"
+
+[custom.jj_bookmarks]
+command = "jj log -r @ -T 'bookmarks' --color=never --ignore-working-copy --no-graph"
+when = "jj root --ignore-working-copy"
+style = "bold bright-purple"
+
+[custom.jj_commit_hidden]
+command = """jj log -r @ -T 'if(hidden, "(hidden)")' --color=never --ignore-working-copy --no-graph"""
+when = "jj root --ignore-working-copy"
+style = "bold purple"
+
+[custom.jj_commit_immutable]
+command = """jj log -r @ -T 'if(immutable, "(immutable)")' --color=never --ignore-working-copy --no-graph"""
+when = "jj root --ignore-working-copy"
+style = "bold red"
+
+[custom.jj_commit_conflict]
+command = """jj log -r @ -T 'if(conflict, "(conflict)")' --color=never --ignore-working-copy --no-graph"""
+when = "jj root --ignore-working-copy"
+style = "bold red"
+
+[custom.jj_commit_empty]
+command = """jj log -r @ -T 'if(empty, "(empty)")' --color=never --ignore-working-copy --no-graph"""
+when = "jj root --ignore-working-copy"
+style = "bold green"
+
+[custom.jj_description]
+command = """jj log -r @ -T 'if(description.len() > 0, truncate_end(40, description.first_line(), "…"))' --color=never --ignore-working-copy --no-graph"""
+when = "jj root --ignore-working-copy"
+style = "bold"
+
+[custom.jj_description_empty]
+command = """jj log -r @ -T 'if(description.len() == 0, "(no description set)")' --color=never --ignore-working-copy --no-graph"""
+when = "jj root --ignore-working-copy"
+style = "bold green"
