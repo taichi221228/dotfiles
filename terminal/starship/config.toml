@@ -1,0 +1,138 @@
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+${custom.jj_changeId}\
+${custom.jj_bookmarks}\
+${custom.jj_commit}\
+${custom.jj_description}\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$gleam\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$nats\
+$direnv\
+$env_var\
+$mise\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$os\
+$container\
+$netns\
+$shell\
+$character"""
+
+# For Alacritty. Alacritty can't display `☁️`/`⛅` using Apple Color Emoji.
+[aws]
+symbol = "🌧️  "
+
+[gcloud]
+symbol = "🌧️  "
+
+[openstack]
+symbol = "🌧️  "
+
+[os.symbols]
+OpenCloudOS = "🌧️  "
+
+[custom.jj_changeId]
+command = "jj log -r @ -T 'change_id.shortest(8)' --color always --ignore-working-copy --no-graph"
+format = "on [$symbol]($style)[$output]() "
+symbol = "󱗆 "
+style = "bright-purple"
+when = "jj root --ignore-working-copy"
+
+[custom.jj_bookmarks]
+command = "jj log -r @ -T 'bookmarks' --ignore-working-copy --no-graph"
+style = "bright-purple"
+when = "jj root --ignore-working-copy"
+
+[custom.jj_commit]
+command = """
+jj log -r @ -T '
+if(empty, raw_escape_sequence(\"\\x1b[1;32m\") ++ \"(empty)\",
+if(conflict, raw_escape_sequence(\"\\x1b[1;31m\") ++ \"(conflict)\",
+if(divergent, raw_escape_sequence(\"\\x1b[1;33m\") ++ \"(divergent)\",
+if(hidden, raw_escape_sequence(\"\\x1b[1;33m\") ++ \"(hidden)\",
+if(immutable, raw_escape_sequence(\"\\x1b[1;33m\") ++ \"(immutable)\")))))
+' --ignore-working-copy --no-graph
+"""
+when = "jj root --ignore-working-copy"
+
+[custom.jj_description]
+command = "jj log -r @ -T 'coalesce(truncate_end(40, description.first_line(), \"…\"), \"(no description set)\")' --ignore-working-copy --no-graph"
+when = "jj root --ignore-working-copy"
