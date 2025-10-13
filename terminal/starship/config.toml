@@ -29,19 +29,6 @@ ${custom.jj_description_empty}\
 $all
 """
 
-# For Alacritty. Alacritty can't display `☁️`/`⛅` using Apple Color Emoji.
-[aws]
-symbol = "🌧️  "
-
-[gcloud]
-symbol = "🌧️  "
-
-[openstack]
-symbol = "🌧️  "
-
-[os.symbols]
-OpenCloudOS = "🌧️  "
-
 # Self implementation of Jujutsu integration.
 [custom.jj]
 when = "jj root --ignore-working-copy"
