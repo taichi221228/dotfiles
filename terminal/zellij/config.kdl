@@ -1,0 +1,14 @@
+keybinds {
+    // `C-g` (the default key for Zellij's `locked` mode) conflicts with Emacs.
+    unbind "Ctrl g"
+    locked {
+        bind "Ctrl ;" {
+            SwitchToMode "Normal"
+        }
+    }
+    shared_except "locked" {
+        bind "Ctrl ;" {
+            SwitchToMode "Locked"
+        }
+    }
+}
