@@ -14,6 +14,7 @@
     ./app/raycast.nix
     ./appearance/font.nix
     ./languages/javascript.nix
+    ./languages/kdl.nix
     ./languages/nix.nix
     ./languages/shell.nix
     ./languages/toml.nix
