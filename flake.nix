@@ -6,13 +6,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    chaotic-cx.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
   outputs =
     {
       nixpkgs,
       home-manager,
       ...
-    }:
+    }@inputs:
     {
       homeConfigurations.taichi221228 = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
@@ -37,6 +38,7 @@
           ./terminal/zellij.nix
           ./terminal/zsh.nix
         ];
+        extraSpecialArgs = { inherit inputs; };
       };
     };
 }
