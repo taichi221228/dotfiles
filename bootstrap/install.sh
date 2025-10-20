@@ -27,4 +27,4 @@ chmod +x "$installer"
 
 mkdir -p ~/.config/home-manager
 ln -sfn ~/dotfiles/flake.* ~/.config/home-manager
-home-manager switch
+nix run github:nix-community/home-manager -- switch
