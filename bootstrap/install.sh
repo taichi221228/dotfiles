@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-daemon="/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
-
-if [ -f "$daemon" ]; then
-	. "$daemon"
-fi
-
 tmpdir=$(mktemp -d)
 installer="$tmpdir/nix-installer.sh"
 
