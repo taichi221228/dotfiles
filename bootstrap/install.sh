@@ -7,11 +7,6 @@ if [ -f "$daemon" ]; then
 	. "$daemon"
 fi
 
-if command -v nix >/dev/null 2>&1; then
-	echo "Nix is already installed. Skipping."
-	exit 0
-fi
-
 tmpdir=$(mktemp -d)
 installer="$tmpdir/nix-installer.sh"
 
