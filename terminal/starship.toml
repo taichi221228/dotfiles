@@ -36,54 +36,54 @@ $all
 
 # Self implementation of Jujutsu integration.
 [custom.jj]
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 symbol = " "
 style = "bright-purple"
 format = "on [$symbol]($style)"
 
 [custom.jj_change_id]
 command = "jj log -r @ -T 'if(!divergent, change_id.short(8))' --color=never --ignore-working-copy --no-graph"
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 style = "bold bright-purple"
 
 [custom.jj_change_id_divergent]
 command = """jj log -r @ -T 'if(divergent, change_id.short(8) ++ "??")' --color=never --ignore-working-copy --no-graph"""
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 style = "bold red"
 
 [custom.jj_bookmarks]
 command = "jj log -r @ -T 'bookmarks' --color=never --ignore-working-copy --no-graph"
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 style = "bold bright-purple"
 
 [custom.jj_commit_hidden]
 command = """jj log -r @ -T 'if(hidden, "(hidden)")' --color=never --ignore-working-copy --no-graph"""
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 style = "bold purple"
 
 [custom.jj_commit_immutable]
 command = """jj log -r @ -T 'if(immutable, "(immutable)")' --color=never --ignore-working-copy --no-graph"""
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 style = "bold red"
 
 [custom.jj_commit_conflict]
 command = """jj log -r @ -T 'if(conflict, "(conflict)")' --color=never --ignore-working-copy --no-graph"""
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 style = "bold red"
 
 [custom.jj_commit_empty]
 command = """jj log -r @ -T 'if(empty, "(empty)")' --color=never --ignore-working-copy --no-graph"""
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 style = "bold green"
 
 [custom.jj_description]
 command = """jj log -r @ -T 'if(description.len() > 0, truncate_end(40, description.first_line(), "…"))' --color=never --ignore-working-copy --no-graph"""
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 style = "bold"
 
 [custom.jj_description_empty]
 command = """jj log -r @ -T 'if(description.len() == 0, "(no description set)")' --color=never --ignore-working-copy --no-graph"""
-when = "jj root --ignore-working-copy"
+when = "jj root --ignore-working-copy >/dev/null 2>&1"
 style = "bold green"
 
 # HACK: The Jujutsu repository enforces the disabling of Git modules.
@@ -92,32 +92,32 @@ disabled = true
 
 [custom.git_branch]
 command = "starship module git_branch"
-when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
+when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
 
 [git_commit]
 disabled = true
 
 [custom.git_commit]
 command = "starship module git_commit"
-when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
+when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
 
 [git_state]
 disabled = true
 
 [custom.git_state]
 command = "starship module git_state"
-when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
+when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
 
 [git_metrics]
 disabled = true
 
 [custom.git_metrics]
 command = "starship module git_metrics"
-when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
+when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
 
 [git_status]
 disabled = true
 
 [custom.git_status]
 command = "starship module git_status"
-when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
+when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
