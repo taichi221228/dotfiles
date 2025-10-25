@@ -11,10 +11,15 @@ $vcsh\
 $fossil_branch\
 $fossil_metrics\
 $git_branch\
+${custom.git_branch}\
 $git_commit\
+${custom.git_commit}\
 $git_state\
+${custom.git_state}\
 $git_metrics\
+${custom.git_metrics}\
 $git_status\
+${custom.git_status}\
 $hg_branch\
 ${custom.jj}\
 ${custom.jj_change_id}\
@@ -80,3 +85,39 @@ style = "bold"
 command = """jj log -r @ -T 'if(description.len() == 0, "(no description set)")' --color=never --ignore-working-copy --no-graph"""
 when = "jj root --ignore-working-copy"
 style = "bold green"
+
+# HACK: The Jujutsu repository enforces the disabling of Git modules.
+[git_branch]
+disabled = true
+
+[custom.git_branch]
+command = "starship module git_branch"
+when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
+
+[git_commit]
+disabled = true
+
+[custom.git_commit]
+command = "starship module git_commit"
+when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
+
+[git_state]
+disabled = true
+
+[custom.git_state]
+command = "starship module git_state"
+when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
+
+[git_metrics]
+disabled = true
+
+[custom.git_metrics]
+command = "starship module git_metrics"
+when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
+
+[git_status]
+disabled = true
+
+[custom.git_status]
+command = "starship module git_status"
+when = "jj root --ignore-working-copy; [ $? -ne 0 ]"
