@@ -92,7 +92,7 @@ disabled = true
 
 [custom.git_branch]
 command = "starship module git_branch"
-when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
+when = "! jj root --ignore-working-copy >/dev/null 2>&1"
 style = "none"
 
 [git_commit]
@@ -100,25 +100,25 @@ disabled = true
 
 [custom.git_commit]
 command = "starship module git_commit"
-when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
+when = "! jj root --ignore-working-copy >/dev/null 2>&1"
 
 [git_state]
 disabled = true
 
 [custom.git_state]
 command = "starship module git_state"
-when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
+when = "! jj root --ignore-working-copy >/dev/null 2>&1"
 
 [git_metrics]
 disabled = true
 
 [custom.git_metrics]
 command = "starship module git_metrics"
-when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
+when = "! jj root --ignore-working-copy >/dev/null 2>&1"
 
 [git_status]
 disabled = true
 
 [custom.git_status]
 command = "starship module git_status"
-when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
+when = "! jj root --ignore-working-copy >/dev/null 2>&1"
