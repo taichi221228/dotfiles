@@ -38,13 +38,13 @@ $all
 [custom.jj]
 when = "jj root --ignore-working-copy >/dev/null 2>&1"
 symbol = " "
-style = "bright-purple"
+style = "purple"
 format = "on [$symbol]($style)"
 
 [custom.jj_change_id]
 command = "jj log -r @ -T 'if(!divergent, change_id.short(8))' --color=never --ignore-working-copy --no-graph"
 when = "jj root --ignore-working-copy >/dev/null 2>&1"
-style = "bold bright-purple"
+style = "bold purple"
 
 [custom.jj_change_id_divergent]
 command = """jj log -r @ -T 'if(divergent, change_id.short(8) ++ "??")' --color=never --ignore-working-copy --no-graph"""
@@ -54,7 +54,7 @@ style = "bold red"
 [custom.jj_bookmarks]
 command = "jj log -r @ -T 'bookmarks' --color=never --ignore-working-copy --no-graph"
 when = "jj root --ignore-working-copy >/dev/null 2>&1"
-style = "bold bright-purple"
+style = "bold purple"
 
 [custom.jj_commit_hidden]
 command = """jj log -r @ -T 'if(hidden, "(hidden)")' --color=never --ignore-working-copy --no-graph"""
