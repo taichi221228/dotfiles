@@ -93,6 +93,7 @@ disabled = true
 [custom.git_branch]
 command = "starship module git_branch"
 when = "jj root --ignore-working-copy >/dev/null 2>&1; [ $? -ne 0 ]"
+style = "none"
 
 [git_commit]
 disabled = true
